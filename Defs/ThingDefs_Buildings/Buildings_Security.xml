@@ -97,7 +97,7 @@
             <turretTopGraphicPath>Things/Building/Security/TurretLongRange_Top</turretTopGraphicPath>
         </building>
         <modExtensions>
-            <li Class="ExtendedTurretFramework.TurretFrameworkExtension">
+            <li Class="TurretExtensions.TurretFrameworkExtension">
                 <shootingAccuracy>0.98</shootingAccuracy>
             </li>
         </modExtensions>
@@ -245,7 +245,7 @@
             <turretTopGraphicPath>Things/Building/Security/MachineGunEmplacement_Top</turretTopGraphicPath>
         </building>
         <modExtensions>
-            <li Class="ExtendedTurretFramework.TurretFrameworkExtension">
+            <li Class="TurretExtensions.TurretFrameworkExtension">
                 <useMannerShootingAccuracy>true</useMannerShootingAccuracy>
                 <useMannerAimingDelayFactor>true</useMannerAimingDelayFactor>
             </li>

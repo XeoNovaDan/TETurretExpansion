@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>[XND] ETF Turret Expansion</name>
+  <name>[XND] TE Turret Expansion</name>
   <author>XeoNovaDan</author>
   <url>https://ludeon.com/forums/index.php?topic=29503.0</url>
   <targetVersion>1.0.0</targetVersion>
-  <description>Current version: v1.0 (15th Jun 2018)\n\n.</description>
+  <description>Current version: v1.0a (18th Jun 2018)\n\nAdds two carefully-balanced turrets which use the framework extensions offered by Turret Extensions.</description>
 </ModMetaData>
