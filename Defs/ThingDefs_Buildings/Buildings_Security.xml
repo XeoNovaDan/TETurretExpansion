@@ -25,10 +25,11 @@
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
         <designationCategory>Security</designationCategory>
         <costList>
-            <Steel>90</Steel>
+            <Steel>105</Steel>
+            <Plasteel>10</Plasteel>
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
-        <costStuffCount>50</costStuffCount>
+        <costStuffCount>90</costStuffCount>
         <stuffCategories>
             <li>Metallic</li>
         </stuffCategories>
@@ -78,6 +79,24 @@
                 <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
                 <outOfFuelMessage>Cannot shoot: Needs new barrel</outOfFuelMessage>
                 <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+            </li>
+            <li Class="TurretExtensions.CompProperties_Upgradable">
+                <costStuffCount>50</costStuffCount>
+                <costList>
+                    <Plasteel>15</Plasteel>
+                    <ComponentSpacer>2</ComponentSpacer>
+                </costList>
+                <researchPrerequisites>
+                    <li>GunTurrets</li>
+                    <li>PrecisionRifling</li>
+                </researchPrerequisites>
+                <workToUpgrade>7200</workToUpgrade>
+                <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+                <MaxHitPointsFactor>1.25</MaxHitPointsFactor>
+                <basePowerConsumptionFactor>1.5</basePowerConsumptionFactor>
+                <shootingAccuracyOffset>0.00666</shootingAccuracyOffset>
+                <turretBurstWarmupTimeFactor>0.8</turretBurstWarmupTimeFactor>
+                <effectiveBarrelDurabilityFactor>1.33333</effectiveBarrelDurabilityFactor>
             </li>
         </comps>
         <passability>PassThroughOnly</passability>
@@ -158,7 +177,7 @@
         </verbs>
     </ThingDef>
 
-    <!-- Machine Gun Emplacement -->
+    <!-- ========== Machine Gun Emplacement ========== -->
 
     <ThingDef ParentName="BuildingBase">
         <defName>Turret_MGEmplacement</defName>
@@ -175,7 +194,6 @@
         <uiIconScale>0.90</uiIconScale>
         <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
         <researchPrerequisites>
-            <!-- <li>GunTurrets</li> -->
             <li>GasOperation</li>
         </researchPrerequisites>
         <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
@@ -228,6 +246,18 @@
                 <outOfFuelMessage>Cannot shoot: Needs new barrel</outOfFuelMessage>
                 <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
             </li>
+            <li Class="TurretExtensions.CompProperties_Upgradable">
+                <costStuffCount>110</costStuffCount>
+                <costList>
+                    <ComponentIndustrial>3</ComponentIndustrial>
+                </costList>
+                <researchPrerequisites>
+                    <li>GasOperation</li>
+                </researchPrerequisites>
+                <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+                <MaxHitPointsFactor>1.43</MaxHitPointsFactor>
+                <turretBurstCooldownTimeFactor>0.75</turretBurstCooldownTimeFactor>
+            </li>
         </comps>
         <passability>PassThroughOnly</passability>
         <pathCost>70</pathCost>
@@ -240,8 +270,8 @@
         <specialDisplayRadius>31</specialDisplayRadius>
         <building>
             <turretGunDef>Gun_TurretMGEmplacement</turretGunDef>
-            <turretBurstCooldownTime>4.0</turretBurstCooldownTime>
-            <turretBurstWarmupTime>1.7</turretBurstWarmupTime>
+            <turretBurstCooldownTime>4.2</turretBurstCooldownTime>
+            <turretBurstWarmupTime>1.9</turretBurstWarmupTime>
             <turretTopGraphicPath>Things/Building/Security/MachineGunEmplacement_Top</turretTopGraphicPath>
         </building>
         <modExtensions>
@@ -261,7 +291,7 @@
         </graphicData>
         <projectile>
             <damageDef>Bullet</damageDef>
-            <damageAmountBase>14</damageAmountBase>
+            <damageAmountBase>18</damageAmountBase>
             <speed>70</speed>
         </projectile>
     </ThingDef>
@@ -270,7 +300,7 @@
         <defName>Gun_TurretMGEmplacement</defName>
         <label>heavy machine gun</label>
         <graphicData>
-            <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+            <texPath>Things/Building/Security/MachineGunEmplacement_Top</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <menuHidden>true</menuHidden>
@@ -282,10 +312,10 @@
         <statBases>
             <Mass>40</Mass>
             <Flammability>0</Flammability>
-            <AccuracyTouch>0.50</AccuracyTouch>
-            <AccuracyShort>0.67</AccuracyShort>
-            <AccuracyMedium>0.55</AccuracyMedium>
-            <AccuracyLong>0.37</AccuracyLong>
+            <AccuracyTouch>0.41</AccuracyTouch>
+            <AccuracyShort>0.55</AccuracyShort>
+            <AccuracyMedium>0.46</AccuracyMedium>
+            <AccuracyLong>0.31</AccuracyLong>
             <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
             <DeteriorationRate>0</DeteriorationRate>
         </statBases>
@@ -305,6 +335,34 @@
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
                 <consumeFuelPerShot>1</consumeFuelPerShot>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <!-- Upgraded weapons for vanilla turrets -->
+
+    <ThingDef ParentName="BaseArtilleryWeapon">
+        <defName>Artillery_MortarUpgraded</defName>
+        <label>mortar</label>
+        <weaponTags Inherit="False" />
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+                <hasStandardCommand>true</hasStandardCommand>
+                <warmupTime>5.8</warmupTime>
+                <forcedMissRadius>10.6</forcedMissRadius>
+                <requireLineOfSight>false</requireLineOfSight>
+                <minRange>30</minRange>
+                <range>500</range>
+                <soundCast>Mortar_LaunchA</soundCast>
+                <muzzleFlashScale>16</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
             </li>
         </verbs>
     </ThingDef>

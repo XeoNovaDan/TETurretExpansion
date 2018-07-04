@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <!-- Mini-Turret -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>*/ThingDef[defName="Turret_MiniTurret"]/comps</xpath>
+        <value>
+            <li Class="TurretExtensions.CompProperties_Upgradable">
+                <costStuffCount>50</costStuffCount>
+                <costList>
+                    <ComponentIndustrial>3</ComponentIndustrial>
+                </costList>
+                <researchPrerequisites>
+                    <li>GunTurrets</li>
+                </researchPrerequisites>
+                <workToUpgrade>4500</workToUpgrade>
+                <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+                <basePowerConsumptionFactor>1.5</basePowerConsumptionFactor>
+                <shootingAccuracyOffset>0.01</shootingAccuracyOffset>
+                <effectiveBarrelDurabilityFactor>1.25</effectiveBarrelDurabilityFactor>
+                <canForceAttack>true</canForceAttack>
+            </li>
+        </value>
+    </Operation>
+    
+    <!-- Autocannon Turret -->
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[defName="Turret_Autocannon"]</xpath>
+        <value>
+            <li Class="TurretExtensions.TurretFrameworkExtension">
+                <shootingAccuracy>0.97</shootingAccuracy>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>*/ThingDef[defName="Turret_Autocannon"]/comps</xpath>
+        <value>
+            <li Class="TurretExtensions.CompProperties_Upgradable">
+                <costList>
+                    <Plasteel>120</Plasteel>
+                    <Uranium>30</Uranium>
+                    <ComponentSpacer>3</ComponentSpacer>
+                </costList>
+                <researchPrerequisites>
+                    <li>HeavyTurrets</li>
+                </researchPrerequisites>
+                <workToUpgrade>21000</workToUpgrade>
+                <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+                <MaxHitPointsFactor>1.5</MaxHitPointsFactor>
+                <FlammabilityFactor>0.57</FlammabilityFactor>
+                <basePowerConsumptionFactor>1.66666</basePowerConsumptionFactor>
+                <shootingAccuracyOffset>0.005</shootingAccuracyOffset>
+                <effectiveBarrelDurabilityFactor>1.5</effectiveBarrelDurabilityFactor>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Mortar -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>*/ThingDef[defName="Turret_Mortar"]/comps</xpath>
+        <value>
+            <li Class="TurretExtensions.CompProperties_Upgradable">
+                <costStuffCount>70</costStuffCount>
+                <costList>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                </costList>
+                <researchPrerequisites>
+                    <li>Mortars</li>
+                </researchPrerequisites>
+                <workToUpgrade>4500</workToUpgrade>
+                <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+                <turretGunDef>Artillery_MortarUpgraded</turretGunDef>
+                <turretBurstCooldownTimeFactor>0.75</turretBurstCooldownTimeFactor>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>
