@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- Long-Range Turret -->
+    <!-- Mini-Sniper Turret -->
 
     <ThingDef ParentName="BuildingBase">
         <defName>TurretGunLongRange</defName>
-        <label>long-ranged turret</label>
+        <label>mini-sniper turret</label>
         <description>Precise machining and advanced sensors allow for enhanced ranged capabilities, but still can't be directly controlled. Requires steel to replace its barrel after heavy use.</description>
         <thingClass>Building_TurretGun</thingClass>
         <statBases>
@@ -14,6 +14,7 @@
             <WorkToBuild>4000</WorkToBuild>
             <Mass>120</Mass>
             <Beauty>-20</Beauty>
+            <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
         </statBases>
         <uiIconPath>Things/Building/Security/TurretLongRange_MenuIcon</uiIconPath>
         <uiIconScale>1.80</uiIconScale>
@@ -27,7 +28,7 @@
         <costList>
             <Steel>105</Steel>
             <Plasteel>10</Plasteel>
-            <ComponentIndustrial>6</ComponentIndustrial>
+            <ComponentIndustrial>5</ComponentIndustrial>
         </costList>
         <costStuffCount>90</costStuffCount>
         <stuffCategories>
@@ -93,8 +94,8 @@
                 <workToUpgrade>7200</workToUpgrade>
                 <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
                 <MaxHitPointsFactor>1.25</MaxHitPointsFactor>
+                <ShootingAccuracyTurretOffset>0.00666</ShootingAccuracyTurretOffset>
                 <basePowerConsumptionFactor>1.5</basePowerConsumptionFactor>
-                <shootingAccuracyOffset>0.00666</shootingAccuracyOffset>
                 <turretBurstWarmupTimeFactor>0.8</turretBurstWarmupTimeFactor>
                 <effectiveBarrelDurabilityFactor>1.33333</effectiveBarrelDurabilityFactor>
             </li>
@@ -115,16 +116,11 @@
             <turretBurstWarmupTime>1.9</turretBurstWarmupTime>
             <turretTopGraphicPath>Things/Building/Security/TurretLongRange_Top</turretTopGraphicPath>
         </building>
-        <modExtensions>
-            <li Class="TurretExtensions.TurretFrameworkExtension">
-                <shootingAccuracy>0.98</shootingAccuracy>
-            </li>
-        </modExtensions>
     </ThingDef>
 
     <ThingDef ParentName="BaseBullet">
         <defName>Bullet_TurretGunLongRange</defName>
-        <label>long-ranged turret bullet</label>
+        <label>mini-sniper turret bullet</label>
         <graphicData>
             <texPath>Things/Projectile/Bullet_Big</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -138,7 +134,7 @@
 
     <ThingDef ParentName="BaseHumanGun">
         <defName>Gun_TurretLongRange</defName>
-        <label>long-ranged turret gun</label>
+        <label>mini-sniper turret gun</label>
         <graphicData>
             <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -156,7 +152,7 @@
             <AccuracyShort>0.80</AccuracyShort>
             <AccuracyMedium>0.88</AccuracyMedium>
             <AccuracyLong>0.80</AccuracyLong>
-            <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+            <RangedWeapon_Cooldown>5.15</RangedWeapon_Cooldown>
             <DeteriorationRate>0</DeteriorationRate>
         </statBases>
         <weaponTags Inherit="False">
@@ -167,7 +163,7 @@
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Bullet_TurretGunLongRange</defaultProjectile>
-                <warmupTime>1.5</warmupTime>
+                <warmupTime>1.9</warmupTime>
                 <range>36.9</range>
                 <soundCast>Shot_SniperRifle</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
@@ -200,7 +196,7 @@
         <designationCategory>Security</designationCategory>
         <costList>
             <Steel>110</Steel>
-            <ComponentIndustrial>9</ComponentIndustrial>
+            <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
         <costStuffCount>180</costStuffCount>
         <stuffCategories>
@@ -249,7 +245,7 @@
             <li Class="TurretExtensions.CompProperties_Upgradable">
                 <costStuffCount>110</costStuffCount>
                 <costList>
-                    <ComponentIndustrial>3</ComponentIndustrial>
+                    <ComponentIndustrial>2</ComponentIndustrial>
                 </costList>
                 <researchPrerequisites>
                     <li>GasOperation</li>
@@ -292,6 +288,7 @@
         <projectile>
             <damageDef>Bullet</damageDef>
             <damageAmountBase>18</damageAmountBase>
+            <stoppingPower>1.0</stoppingPower>
             <speed>70</speed>
         </projectile>
     </ThingDef>
@@ -312,11 +309,11 @@
         <statBases>
             <Mass>40</Mass>
             <Flammability>0</Flammability>
-            <AccuracyTouch>0.41</AccuracyTouch>
-            <AccuracyShort>0.55</AccuracyShort>
-            <AccuracyMedium>0.46</AccuracyMedium>
-            <AccuracyLong>0.31</AccuracyLong>
-            <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+            <AccuracyTouch>0.45</AccuracyTouch>
+            <AccuracyShort>0.60</AccuracyShort>
+            <AccuracyMedium>0.50</AccuracyMedium>
+            <AccuracyLong>0.35</AccuracyLong>
+            <RangedWeapon_Cooldown>4.2</RangedWeapon_Cooldown>
             <DeteriorationRate>0</DeteriorationRate>
         </statBases>
         <weaponTags Inherit="False">
@@ -327,7 +324,7 @@
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Bullet_TurretMGEmplacement</defaultProjectile>
-                <warmupTime>1.5</warmupTime>
+                <warmupTime>1.9</warmupTime>
                 <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
                 <burstShotCount>6</burstShotCount>
                 <range>30.9</range>
@@ -343,6 +340,50 @@
     </ThingDef>
 
     <!-- Upgraded weapons for vanilla turrets -->
+
+    <ThingDef ParentName="BaseHumanGun">
+        <defName>Gun_TurretSniperUpgraded</defName>
+        <label>sniper cannon</label>
+        <description>A self-loading sniper cannon designed to attach to a turret. Precise at range, it's not good at tracking close targets.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <menuHidden>true</menuHidden>
+        <destroyOnDrop>true</destroyOnDrop>
+        <tradeability>None</tradeability>
+        <useHitPoints>false</useHitPoints>
+        <statBases>
+            <AccuracyTouch>0.20</AccuracyTouch>
+            <AccuracyShort>0.30</AccuracyShort>
+            <AccuracyMedium>0.45</AccuracyMedium>
+            <AccuracyLong>0.99</AccuracyLong>
+            <RangedWeapon_Cooldown>2.9</RangedWeapon_Cooldown>
+            <DeteriorationRate>0</DeteriorationRate>
+            <Mass>40</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <weaponTags Inherit="false">
+            <li>TurretGun</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_TurretSniper</defaultProjectile>
+                <warmupTime>0</warmupTime>
+                <minRange>11.9</minRange>
+                <range>49.9</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_TurretSniper</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>18</muzzleFlashScale>
+                <consumeFuelPerShot>1</consumeFuelPerShot>
+            </li>
+        </verbs>
+    </ThingDef>
 
     <ThingDef ParentName="BaseArtilleryWeapon">
         <defName>Artillery_MortarUpgraded</defName>
