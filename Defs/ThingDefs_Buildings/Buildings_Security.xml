@@ -195,13 +195,12 @@
         <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
         <designationCategory>Security</designationCategory>
         <costList>
-            <Steel>110</Steel>
+            <Steel>100</Steel>
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
-        <costStuffCount>180</costStuffCount>
+        <costStuffCount>110</costStuffCount>
         <stuffCategories>
             <li>Metallic</li>
-            <li>Stony</li>
         </stuffCategories>
         <placeWorkers>
             <li>PlaceWorker_TurretTop</li>
@@ -243,7 +242,7 @@
                 <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
             </li>
             <li Class="TurretExtensions.CompProperties_Upgradable">
-                <costStuffCount>110</costStuffCount>
+                <costStuffCount>80</costStuffCount>
                 <costList>
                     <ComponentIndustrial>2</ComponentIndustrial>
                 </costList>
