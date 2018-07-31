@@ -6,7 +6,7 @@
     <ThingDef ParentName="BuildingBase">
         <defName>Ballista</defName>
         <label>ballista</label>
-        <description>An ancient but lethal contraption that launches heavy projectiles at enemies. Requires somebody to man it. Long-ranged, but fires slowly.</description>
+        <description>An ancient but deadly contraption that launches heavy projectiles at enemies. Requires somebody to man it. Long-ranged, but fires slowly.</description>
         <thingClass>Building_TurretGun</thingClass>
         <statBases>
             <MaxHitPoints>200</MaxHitPoints>
@@ -79,7 +79,7 @@
         <fillPercent>0.4</fillPercent>
         <castEdgeShadows>true</castEdgeShadows>
         <hasTooltip>true</hasTooltip>
-        <specialDisplayRadius>30.9</specialDisplayRadius>
+        <specialDisplayRadius>36.9</specialDisplayRadius>
         <building>
             <turretGunDef>Weapon_Ballista</turretGunDef>
             <turretBurstCooldownTime>4.5</turretBurstCooldownTime>
@@ -126,7 +126,7 @@
         <statBases>
             <Mass>30</Mass>
             <Flammability>0</Flammability>
-            <AccuracyTouch>0.60</AccuracyTouch>
+            <AccuracyTouch>0.50</AccuracyTouch>
             <AccuracyShort>0.85</AccuracyShort>
             <AccuracyMedium>0.65</AccuracyMedium>
             <AccuracyLong>0.45</AccuracyLong>
@@ -140,6 +140,7 @@
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Projectile_Ballista</defaultProjectile>
                 <warmupTime>1.5</warmupTime>
+                <minRange>5.9</minRange>
                 <range>36.9</range>
                 <soundCast>Bow_Large</soundCast>
                 <consumeFuelPerShot>1</consumeFuelPerShot>
