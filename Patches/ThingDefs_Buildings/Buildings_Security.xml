@@ -6,9 +6,9 @@
         <xpath>*/ThingDef[defName="Turret_MiniTurret"]/comps</xpath>
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
-                <costStuffCount>50</costStuffCount>
+                <costStuffCount>40</costStuffCount>
                 <costList>
-                    <ComponentIndustrial>3</ComponentIndustrial>
+                    <ComponentIndustrial>1</ComponentIndustrial>
                 </costList>
                 <researchPrerequisites>
                     <li>GunTurrets</li>
@@ -29,9 +29,8 @@
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
                 <costList>
-                    <Plasteel>120</Plasteel>
-                    <Uranium>30</Uranium>
-                    <ComponentSpacer>3</ComponentSpacer>
+                    <Plasteel>40</Plasteel>
+                    <ComponentSpacer>2</ComponentSpacer>
                 </costList>
                 <researchPrerequisites>
                     <li>HeavyTurrets</li>
@@ -39,33 +38,34 @@
                 <workToUpgrade>21000</workToUpgrade>
                 <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
                 <MaxHitPointsFactor>1.5</MaxHitPointsFactor>
-                <ShootingAccuracyTurretOffset>0.005</ShootingAccuracyTurretOffset>
+                <ShootingAccuracyTurretOffset>0.01</ShootingAccuracyTurretOffset>
                 <FlammabilityFactor>0.57</FlammabilityFactor>
-                <basePowerConsumptionFactor>1.66666</basePowerConsumptionFactor>
+                <basePowerConsumptionFactor>2</basePowerConsumptionFactor>
                 <effectiveBarrelDurabilityFactor>1.5</effectiveBarrelDurabilityFactor>
             </li>
         </value>
     </Operation>
 
-    <!-- Sniper Turret-->
+    <!-- Uranium Slug Turret-->
     <Operation Class="PatchOperationAdd">
         <xpath>*/ThingDef[defName="Turret_Sniper"]/comps</xpath>
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
                 <costList>
-                    <Steel>130</Steel>
-                    <Plasteel>30</Plasteel>
-                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <Plasteel>40</Plasteel>
+                    <ComponentSpacer>2</ComponentSpacer>
                 </costList>
                 <researchPrerequisites>
                     <li>SniperTurret</li>
                 </researchPrerequisites>
-                <workToUpgrade>17000</workToUpgrade>
+                <workToUpgrade>21000</workToUpgrade>
                 <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-                <basePowerConsumptionFactor>1.66666</basePowerConsumptionFactor>
+                <MaxHitPointsFactor>1.5</MaxHitPointsFactor>
+                <FlammabilityFactor>0.57</FlammabilityFactor>
+                <basePowerConsumptionFactor>2</basePowerConsumptionFactor>
                 <effectiveBarrelDurabilityFactor>1.25</effectiveBarrelDurabilityFactor>
                 <turretGunDef>Gun_TurretSniperUpgraded</turretGunDef>
-                <turretBurstCooldownTimeFactor>0.90625</turretBurstCooldownTimeFactor>
+                <turretBurstCooldownTimeFactor>0.83333</turretBurstCooldownTimeFactor>
             </li>
         </value>
     </Operation>
@@ -77,7 +77,7 @@
             <li Class="TurretExtensions.CompProperties_Upgradable">
                 <costStuffCount>70</costStuffCount>
                 <costList>
-                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <ComponentIndustrial>2</ComponentIndustrial>
                 </costList>
                 <researchPrerequisites>
                     <li>Mortars</li>
