@@ -159,7 +159,7 @@
             <MaxHitPoints>120</MaxHitPoints>
             <Flammability>0.7</Flammability>
             <WorkToBuild>4000</WorkToBuild>
-            <Mass>120</Mass>
+            <Mass>12</Mass>
             <Beauty>-20</Beauty>
             <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
         </statBases>
