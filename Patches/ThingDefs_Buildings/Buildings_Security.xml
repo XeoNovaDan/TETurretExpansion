@@ -7,6 +7,7 @@
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
                 <description>Improve the mini-turret's AI brain and reinforce its barrel to improve combat performance and reliability. The AI brain will also be smart enough to be directly controlled, but still too dumb to intelligently swap targets if a prioritized target gets downed.</description>
+                <upgradedTurretDescription>A portable automatic turret. Requires steel to refurbish its barrel after heavy use. May explode when damaged. Its modified AI brain can be directly controlled, but is still rather dumb.</upgradedTurretDescription>
                 <costStuffCount>40</costStuffCount>
                 <costList>
                     <ComponentIndustrial>1</ComponentIndustrial>
