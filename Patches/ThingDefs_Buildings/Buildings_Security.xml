@@ -15,9 +15,11 @@
                 </researchPrerequisites>
                 <workToUpgrade>4500</workToUpgrade>
                 <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-                <ShootingAccuracyTurretOffset>0.01</ShootingAccuracyTurretOffset>
+                <statOffsets>
+                    <ShootingAccuracyTurret>0.01</ShootingAccuracyTurret>
+                </statOffsets>
                 <basePowerConsumptionFactor>1.5</basePowerConsumptionFactor>
-                <effectiveBarrelDurabilityFactor>1.25</effectiveBarrelDurabilityFactor>
+                <barrelDurabilityFactor>1.25</barrelDurabilityFactor>
                 <canForceAttack>true</canForceAttack>
             </li>
         </value>
@@ -37,11 +39,15 @@
                 </researchPrerequisites>
                 <workToUpgrade>21000</workToUpgrade>
                 <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-                <MaxHitPointsFactor>1.5</MaxHitPointsFactor>
-                <ShootingAccuracyTurretOffset>0.01</ShootingAccuracyTurretOffset>
-                <FlammabilityFactor>0.57</FlammabilityFactor>
+                <statFactors>
+                    <MaxHitPoints>1.5</MaxHitPoints>
+                    <Flammability>0.57</Flammability>
+                </statFactors>
+                <statOffsets>
+                    <ShootingAccuracyTurret>0.01</ShootingAccuracyTurret>
+                </statOffsets>
                 <basePowerConsumptionFactor>2</basePowerConsumptionFactor>
-                <effectiveBarrelDurabilityFactor>1.5</effectiveBarrelDurabilityFactor>
+                <barrelDurabilityFactor>1.5</barrelDurabilityFactor>
             </li>
         </value>
     </Operation>
@@ -52,18 +58,23 @@
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
                 <costList>
-                    <Plasteel>40</Plasteel>
-                    <ComponentSpacer>2</ComponentSpacer>
+                    <Plasteel>60</Plasteel>
+                    <ComponentSpacer>3</ComponentSpacer>
                 </costList>
                 <researchPrerequisites>
                     <li>SniperTurret</li>
                 </researchPrerequisites>
                 <workToUpgrade>21000</workToUpgrade>
                 <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-                <MaxHitPointsFactor>1.5</MaxHitPointsFactor>
-                <FlammabilityFactor>0.57</FlammabilityFactor>
+                <statFactors>
+                    <MaxHitPoints>1.5</MaxHitPoints>
+                    <Flammability>0.57</Flammability>
+                </statFactors>
+                <statOffsets>
+                    <ShootingAccuracyTurret>0.007</ShootingAccuracyTurret>
+                </statOffsets>
                 <basePowerConsumptionFactor>2</basePowerConsumptionFactor>
-                <effectiveBarrelDurabilityFactor>1.25</effectiveBarrelDurabilityFactor>
+                <barrelDurabilityFactor>1.25</barrelDurabilityFactor>
                 <turretGunDef>Gun_TurretSniperUpgraded</turretGunDef>
                 <turretBurstCooldownTimeFactor>0.83333</turretBurstCooldownTimeFactor>
             </li>

@@ -63,12 +63,15 @@
                 <costList>
                     <Steel>20</Steel>
                 </costList>
+                <workToUpgrade>3200</workToUpgrade>
                 <researchPrerequisites>
                     <li>Greatbow</li>
                 </researchPrerequisites>
                 <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-                <MaxHitPointsFactor>1.5</MaxHitPointsFactor>
-                <effectiveBarrelDurabilityFactor>1.5</effectiveBarrelDurabilityFactor>
+                <statFactors>
+                    <MaxHitPoints>1.5</MaxHitPoints>
+                </statFactors>
+                <barrelDurabilityFactor>1.5</barrelDurabilityFactor>
             </li>
         </comps>
         <passability>PassThroughOnly</passability>
@@ -238,11 +241,12 @@
                 </researchPrerequisites>
                 <workToUpgrade>7200</workToUpgrade>
                 <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-                <MaxHitPointsFactor>1.25</MaxHitPointsFactor>
-                <ShootingAccuracyTurretOffset>0.01</ShootingAccuracyTurretOffset>
+                <statOffsets>
+                    <ShootingAccuracyTurret>0.01</ShootingAccuracyTurret>
+                </statOffsets>
                 <basePowerConsumptionFactor>1.5</basePowerConsumptionFactor>
                 <turretBurstWarmupTimeFactor>0.8</turretBurstWarmupTimeFactor>
-                <effectiveBarrelDurabilityFactor>1.5</effectiveBarrelDurabilityFactor>
+                <barrelDurabilityFactor>1.5</barrelDurabilityFactor>
             </li>
         </comps>
         <passability>PassThroughOnly</passability>
@@ -390,12 +394,19 @@
                 <costList>
                     <ComponentIndustrial>2</ComponentIndustrial>
                 </costList>
+                <workToUpgrade>9000</workToUpgrade>
                 <researchPrerequisites>
                     <li>GasOperation</li>
                 </researchPrerequisites>
                 <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-                <MaxHitPointsFactor>1.5</MaxHitPointsFactor>
+                <statFactors>
+                    <MaxHitPoints>1.5</MaxHitPoints>
+                </statFactors>
+                <barrelDurabilityFactor>1.5</barrelDurabilityFactor>
                 <turretBurstCooldownTimeFactor>0.75</turretBurstCooldownTimeFactor>
+            </li>
+            <li>
+                <compClass>TurretExtensions.CompSmartForcedTarget</compClass>
             </li>
         </comps>
         <passability>PassThroughOnly</passability>
