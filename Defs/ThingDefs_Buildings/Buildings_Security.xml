@@ -60,6 +60,7 @@
                 <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
             </li>
             <li Class="TurretExtensions.CompProperties_Upgradable">
+                <description>Reinforce the ballista with steel to improve its overall durability.</description>
                 <costList>
                     <Steel>20</Steel>
                 </costList>
@@ -230,6 +231,7 @@
                 <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
             </li>
             <li Class="TurretExtensions.CompProperties_Upgradable">
+                <description>Improve the mini-sniper turret's sensors and reinforce its barrel to improve combat performance and overall reliability.</description>
                 <costStuffCount>40</costStuffCount>
                 <costList>
                     <Plasteel>10</Plasteel>
@@ -390,6 +392,7 @@
                 <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
             </li>
             <li Class="TurretExtensions.CompProperties_Upgradable">
+                <description>Improve the machine gun's feeding system and reinforce the barrel and foundation to decrease time between bursts and improve overall durability.</description>
                 <costStuffCount>80</costStuffCount>
                 <costList>
                     <ComponentIndustrial>2</ComponentIndustrial>

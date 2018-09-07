@@ -6,6 +6,7 @@
         <xpath>*/ThingDef[defName="Turret_MiniTurret"]/comps</xpath>
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
+                <description>Improve the mini-turret's AI brain and reinforce its barrel to improve combat performance and reliability. The AI brain will also be smart enough to be directly controlled, but still too dumb to intelligently swap targets if a prioritized target gets downed.</description>
                 <costStuffCount>40</costStuffCount>
                 <costList>
                     <ComponentIndustrial>1</ComponentIndustrial>
@@ -30,6 +31,7 @@
         <xpath>*/ThingDef[defName="Turret_Autocannon"]/comps</xpath>
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
+                <description>Replace the autocannon turret's sensors and reinforce it with plasteel to improve accuracy, increase overall durability and reduce flammability.</description>
                 <costList>
                     <Plasteel>40</Plasteel>
                     <ComponentSpacer>2</ComponentSpacer>
@@ -57,6 +59,7 @@
         <xpath>*/ThingDef[defName="Turret_Sniper"]/comps</xpath>
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
+                <description>Improve the uranium slug turret's sensors and reinforce it with plasteel to improve accuracy, increase overall durability and reduce flammability.</description>
                 <costList>
                     <Plasteel>60</Plasteel>
                     <ComponentSpacer>3</ComponentSpacer>
@@ -86,6 +89,7 @@
         <xpath>*/ThingDef[defName="Turret_Mortar"]/comps</xpath>
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
+                <description>Reinforce the mortar's cannon and improve the mechanical feeding system to improve accuracy and decrease the time between shots.</description>
                 <costStuffCount>70</costStuffCount>
                 <costList>
                     <ComponentIndustrial>2</ComponentIndustrial>
