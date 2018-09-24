@@ -21,7 +21,7 @@
                     <ShootingAccuracyTurret>0.01</ShootingAccuracyTurret>
                 </statOffsets>
                 <basePowerConsumptionFactor>1.5</basePowerConsumptionFactor>
-                <barrelDurabilityFactor>1.25</barrelDurabilityFactor>
+                <barrelDurabilityFactor>1.5</barrelDurabilityFactor>
                 <canForceAttack>true</canForceAttack>
             </li>
         </value>
@@ -42,6 +42,7 @@
                 </researchPrerequisites>
                 <workToUpgrade>21000</workToUpgrade>
                 <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+                <turretTopDrawSize>2.7</turretTopDrawSize>
                 <statFactors>
                     <MaxHitPoints>1.5</MaxHitPoints>
                     <Flammability>0.57</Flammability>

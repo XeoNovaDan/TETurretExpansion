@@ -178,7 +178,7 @@
         <designationCategory>Security</designationCategory>
         <costList>
             <Steel>50</Steel>
-            <ComponentIndustrial>3</ComponentIndustrial>
+            <ComponentIndustrial>4</ComponentIndustrial>
         </costList>
         <costStuffCount>70</costStuffCount>
         <stuffCategories>
@@ -235,7 +235,7 @@
                 <costStuffCount>40</costStuffCount>
                 <costList>
                     <Plasteel>10</Plasteel>
-                    <ComponentSpacer>1</ComponentSpacer>
+                    <ComponentIndustrial>2</ComponentIndustrial>
                 </costList>
                 <researchPrerequisites>
                     <li>GunTurrets</li>
