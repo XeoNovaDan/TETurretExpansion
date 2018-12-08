@@ -4,6 +4,6 @@
     <dependencies>
         <li>TurretExtensions >= 1.2.1</li>
     </dependencies>
-    <manifestUri>https://rawgit.com/XeoNovaDan/TETurretExpansion/master/About/Manifest.xml</manifestUri>
+    <manifestUri>https://cdn.jsdelivr.net/gh/XeoNovaDan/TETurretExpansion/About/Manifest.xml</manifestUri>
     <downloadUri>https://github.com/XeoNovaDan/TETurretExpansion/releases</downloadUri>
 </Manifest>
