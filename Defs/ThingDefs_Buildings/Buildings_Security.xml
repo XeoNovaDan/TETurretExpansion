@@ -91,9 +91,11 @@
             <turretTopGraphicPath>Things/Building/Security/Ballista_Top</turretTopGraphicPath>
         </building>
         <modExtensions>
-            <li Class="TurretExtensions.TurretFrameworkExtension">
-                <useMannerShootingAccuracy>true</useMannerShootingAccuracy>
-                <useMannerAimingDelayFactor>true</useMannerAimingDelayFactor>
+            <li Class="TurretExtensions.TurretDefExtension">
+                <useManningPawnShootingAccuracy>true</useManningPawnShootingAccuracy>
+                <useManningPawnAimingDelayFactor>true</useManningPawnAimingDelayFactor>
+                <trainManningPawnShooting>true</trainManningPawnShooting>
+                <firingAngle>90</firingAngle>
             </li>
         </modExtensions>
     </ThingDef>
@@ -428,9 +430,11 @@
             <turretTopGraphicPath>Things/Building/Security/MachineGunEmplacement_Top</turretTopGraphicPath>
         </building>
         <modExtensions>
-            <li Class="TurretExtensions.TurretFrameworkExtension">
-                <useMannerShootingAccuracy>true</useMannerShootingAccuracy>
-                <useMannerAimingDelayFactor>true</useMannerAimingDelayFactor>
+            <li Class="TurretExtensions.TurretDefExtension">
+                <useManningPawnShootingAccuracy>true</useManningPawnShootingAccuracy>
+                <useManningPawnAimingDelayFactor>true</useManningPawnAimingDelayFactor>
+                <trainManningPawnShooting>true</trainManningPawnShooting>
+                <firingAngle>180</firingAngle>
             </li>
         </modExtensions>
     </ThingDef>
