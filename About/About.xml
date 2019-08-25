@@ -3,6 +3,8 @@
   <name>[XND] TE Turret Expansion</name>
   <author>XeoNovaDan</author>
   <url>https://ludeon.com/forums/index.php?topic=29503.0</url>
-  <targetVersion>1.0.2059</targetVersion>
+  <supportedVersions>
+		<li>1.0</li>
+	</supportedVersions>
   <description>Current version: v1.3.3 (17th October 2018)\n\nAdds three carefully-balanced turrets which use the framework extensions offered by Turret Extensions. Also makes the vanilla turrets upgradable.</description>
 </ModMetaData>
