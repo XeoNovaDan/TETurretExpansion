@@ -21,7 +21,7 @@
                     <ShootingAccuracyTurret>0.01</ShootingAccuracyTurret>
                 </statOffsets>
                 <basePowerConsumptionFactor>1.5</basePowerConsumptionFactor>
-                <barrelDurabilityFactor>1.5</barrelDurabilityFactor>
+                <fuelCapacityFactor>1.5</fuelCapacityFactor>
                 <canForceAttack>true</canForceAttack>
             </li>
         </value>
@@ -51,7 +51,7 @@
                     <ShootingAccuracyTurret>0.01</ShootingAccuracyTurret>
                 </statOffsets>
                 <basePowerConsumptionFactor>2</basePowerConsumptionFactor>
-                <barrelDurabilityFactor>1.5</barrelDurabilityFactor>
+                <fuelCapacityFactor>1.5</fuelCapacityFactor>
             </li>
         </value>
     </Operation>
@@ -79,7 +79,7 @@
                     <ShootingAccuracyTurret>0.007</ShootingAccuracyTurret>
                 </statOffsets>
                 <basePowerConsumptionFactor>2</basePowerConsumptionFactor>
-                <barrelDurabilityFactor>1.25</barrelDurabilityFactor>
+                <fuelCapacityFactor>1.25</fuelCapacityFactor>
                 <turretGunDef>Gun_TurretSniperUpgraded</turretGunDef>
                 <turretBurstCooldownTimeFactor>0.83333</turretBurstCooldownTimeFactor>
             </li>

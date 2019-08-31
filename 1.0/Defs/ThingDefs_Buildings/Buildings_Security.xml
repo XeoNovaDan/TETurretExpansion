@@ -73,11 +73,11 @@
                 <statFactors>
                     <MaxHitPoints>1.5</MaxHitPoints>
                 </statFactors>
-                <barrelDurabilityFactor>1.5</barrelDurabilityFactor>
+                <fuelCapacityFactor>1.5</fuelCapacityFactor>
             </li>
         </comps>
         <passability>PassThroughOnly</passability>
-        <pathCost>70</pathCost>
+        <pathCost>50</pathCost>
         <size>(2,2)</size>
         <hasInteractionCell>True</hasInteractionCell>
         <interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -91,6 +91,11 @@
             <turretBurstWarmupTime>1.5</turretBurstWarmupTime>
             <turretTopGraphicPath>Things/Building/Security/Ballista_Top</turretTopGraphicPath>
         </building>
+        <modExtensions>
+            <li Class="TurretExtensions.TurretFrameworkExtension">
+                <firingAngle>90</firingAngle>
+            </li>
+        </modExtensions>
     </ThingDef>
 
     <ThingDef ParentName="BaseProjectileNeolithic">
@@ -243,7 +248,7 @@
                 </statOffsets>
                 <basePowerConsumptionFactor>1.5</basePowerConsumptionFactor>
                 <turretBurstWarmupTimeFactor>0.8</turretBurstWarmupTimeFactor>
-                <barrelDurabilityFactor>1.5</barrelDurabilityFactor>
+                <fuelCapacityFactor>1.5</fuelCapacityFactor>
             </li>
         </comps>
         <passability>PassThroughOnly</passability>
@@ -292,7 +297,7 @@
         <destroyOnDrop>true</destroyOnDrop>
         <useHitPoints>false</useHitPoints>
         <statBases>
-            <Mass>40</Mass>
+            <Mass>5</Mass>
             <Flammability>0</Flammability>
             <AccuracyTouch>0.50</AccuracyTouch>
             <AccuracyShort>0.80</AccuracyShort>
@@ -400,17 +405,17 @@
                 <statFactors>
                     <MaxHitPoints>1.5</MaxHitPoints>
                 </statFactors>
-                <barrelDurabilityFactor>1.5</barrelDurabilityFactor>
+                <fuelCapacityFactor>1.5</fuelCapacityFactor>
                 <turretBurstCooldownTimeFactor>0.75</turretBurstCooldownTimeFactor>
             </li>
             <li Class="TurretExtensions.CompProperties_SmartForcedTarget"/>
         </comps>
         <passability>PassThroughOnly</passability>
-        <pathCost>70</pathCost>
+        <pathCost>50</pathCost>
         <size>(3,1)</size>
         <hasInteractionCell>True</hasInteractionCell>
         <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-        <fillPercent>0.5</fillPercent>
+        <fillPercent>0.65</fillPercent>
         <castEdgeShadows>true</castEdgeShadows>
         <hasTooltip>true</hasTooltip>
         <specialDisplayRadius>30.9</specialDisplayRadius>
@@ -420,6 +425,11 @@
             <turretBurstWarmupTime>1.8</turretBurstWarmupTime>
             <turretTopGraphicPath>Things/Building/Security/MachineGunEmplacement_Top</turretTopGraphicPath>
         </building>
+        <modExtensions>
+            <li Class="TurretExtensions.TurretFrameworkExtension">
+                <firingAngle>180</firingAngle>
+            </li>
+        </modExtensions>
     </ThingDef>
 
     <ThingDef ParentName="BaseBullet">
@@ -432,8 +442,8 @@
         <projectile>
             <damageDef>Bullet</damageDef>
             <damageAmountBase>18</damageAmountBase>
-            <stoppingPower>1.0</stoppingPower>
-            <speed>70</speed>
+            <stoppingPower>1.5</stoppingPower>
+            <speed>55</speed>
         </projectile>
     </ThingDef>
 
