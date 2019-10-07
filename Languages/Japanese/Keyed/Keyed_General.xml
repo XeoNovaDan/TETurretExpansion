@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Designators -->
+  <DesignatorUpgradeTurret>タレット改良</DesignatorUpgradeTurret>
+  <DesignatorUpgradeTurretDesc>火力を向上させるために改良するタレットを指定してください。</DesignatorUpgradeTurretDesc>
+
+  <MessageMustDesignateUpgradableTurrets>改良可能なタレットを選択してください。</MessageMustDesignateUpgradableTurrets>
+
+  <!-- Dialogs_StatReports -->
+  <NoAlreadyUpgraded>不可能(すでに改良済)</NoAlreadyUpgraded>
+  <YesClickForDetails>可能(詳細はクリック)</YesClickForDetails>
+
+  <MannableTurretAccuracyDepends>命中精度はこのタレットを操作しているポーンのスキルによって異なります。</MannableTurretAccuracyDepends>
+  <MannableTurretNotManned>操作員なし</MannableTurretNotManned>
+  <MannableTurretIsManned>操作員あり</MannableTurretIsManned>
+
+  <!-- Dialogs_Various -->
+  <UpgradedTurretShootingAccuracy>命中精度の改良</UpgradedTurretShootingAccuracy>
+  <UserShootingAccuracy>使用者の命中精度</UserShootingAccuracy>
+
+  <MannedTurretUsesShooterAccuracy>操作員の精度を使用</MannedTurretUsesShooterAccuracy>
+  <MannedTurretUsesShooterAccuracyExplanation>この有人タレットが操作員(ポーン)の命中精度を使用するかどうか。</MannedTurretUsesShooterAccuracyExplanation>
+  <MannedTurretUsesShooterAccuracyBonus>{1}を使用すると、操作員の命中精度が{0}増加します。</MannedTurretUsesShooterAccuracyBonus>
+  <MannedTurretUsesShooterAccuracyPenalty>{1}を使用すると、操作員の命中精度が{0}減少します。</MannedTurretUsesShooterAccuracyPenalty>
+  <MannedTurretUsesShooterAccuracyNoChange>{0}は、操作員の命中精度を変更しません。</MannedTurretUsesShooterAccuracyNoChange>
+  <MortarShellDependent>弾薬に依存する</MortarShellDependent>
+  <ShellDamageType>ダメージタイプ</ShellDamageType>
+  <ShellExplosionRadius>爆発半径</ShellExplosionRadius>
+
+  <Upgradable>改良可能</Upgradable>
+  <TurretUpgradeBenefitsMain>火力を向上させるためタレットを改良することが可能かどうか。</TurretUpgradeBenefitsMain>
+  <TurretResourceRequirements>必要な材料</TurretResourceRequirements>
+  <TurretMinimumUpgradeSkill>必要な建設スキル</TurretMinimumUpgradeSkill>
+  <TurretResearchRequirements>必要な研究</TurretResearchRequirements>
+  <TurretUpgradeBenefitsUpgradable>このタレットを改良した際のステータス修正は次のとおりです。</TurretUpgradeBenefitsUpgradable>
+  <TurretUpgradeBenefitsNotUpgradable>このタレットは改良不可能です。</TurretUpgradeBenefitsNotUpgradable>
+
+  <Effective>準備完了</Effective>
+  <TurretManuallyAimable>タレットはポーンが直接制御可能</TurretManuallyAimable>
+
+  <!-- Messages -->
+  <ConstructionSkillTooLowMessage>あなたの{0}には、{1}を改良するのに必要な建築スキルを持った入植者が誰も居ません。</ConstructionSkillTooLowMessage>
+  <UpgradeResearchNotMetMessage>改良に必要な研究「{0}」が未完了</UpgradeResearchNotMetMessage>
+  <TurretUpgradeCostMessage>{0}を改良するのに必要な材料</TurretUpgradeCostMessage>
+  <UpgradeFailMinorMessage>{1}の改良に{0}が失敗しました。</UpgradeFailMinorMessage>
+  <UpgradeFailMajorMessage>{1}の改良に{0}が失敗してダメージを与えました。</UpgradeFailMajorMessage>
+
+  <UpgradeFailResourceLossSmall>材料のほとんどは正常に回収されました。</UpgradeFailResourceLossSmall>
+  <UpgradeFailResourceLossMedium>一部の材料が失われました。</UpgradeFailResourceLossMedium>
+  <UpgradeFailResourceLossHigh>材料のほとんどは回収できなかった。</UpgradeFailResourceLossHigh>
+  <UpgradeFailResourceLossTotal>材料を何も回収できなかった。</UpgradeFailResourceLossTotal>
+
+  <!-- Misc_Gameplay -->
+  <TextMote_UpgradeFail>改良に失敗した</TextMote_UpgradeFail>
+  <TurretUpgradedText>改良</TurretUpgradedText>
+  <TurretUpgradeProgress>改良作業中</TurretUpgradeProgress>
+
+</LanguageData>
