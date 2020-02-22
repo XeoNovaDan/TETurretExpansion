@@ -12,8 +12,9 @@
             <MaxHitPoints>200</MaxHitPoints>
             <Flammability>1.0</Flammability>
             <WorkToBuild>7500</WorkToBuild>
-            <Beauty>-60</Beauty>
+            <Beauty>-20</Beauty>
         </statBases>
+        <uiIconScale>0.90</uiIconScale>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
         <researchPrerequisites>
             <li>Greatbow</li>
@@ -72,11 +73,11 @@
                 <statFactors>
                     <MaxHitPoints>1.5</MaxHitPoints>
                 </statFactors>
-                <barrelDurabilityFactor>1.5</barrelDurabilityFactor>
+                <fuelCapacityFactor>1.5</fuelCapacityFactor>
             </li>
         </comps>
         <passability>PassThroughOnly</passability>
-        <pathCost>70</pathCost>
+        <pathCost>50</pathCost>
         <size>(2,2)</size>
         <hasInteractionCell>True</hasInteractionCell>
         <interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -92,8 +93,7 @@
         </building>
         <modExtensions>
             <li Class="TurretExtensions.TurretFrameworkExtension">
-                <useMannerShootingAccuracy>true</useMannerShootingAccuracy>
-                <useMannerAimingDelayFactor>true</useMannerAimingDelayFactor>
+                <firingAngle>90</firingAngle>
             </li>
         </modExtensions>
     </ThingDef>
@@ -225,7 +225,7 @@
                 <initialFuelPercent>1</initialFuelPercent>
                 <autoRefuelPercent>0.25</autoRefuelPercent>
                 <showFuelGizmo>true</showFuelGizmo>
-                <fuelMultiplier>0.66667</fuelMultiplier>
+                <fuelMultiplier>0.66666</fuelMultiplier>
                 <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
                 <outOfFuelMessage>Cannot shoot: Needs new barrel</outOfFuelMessage>
                 <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
@@ -248,7 +248,7 @@
                 </statOffsets>
                 <basePowerConsumptionFactor>1.5</basePowerConsumptionFactor>
                 <turretBurstWarmupTimeFactor>0.8</turretBurstWarmupTimeFactor>
-                <barrelDurabilityFactor>1.5</barrelDurabilityFactor>
+                <fuelCapacityFactor>1.5</fuelCapacityFactor>
             </li>
         </comps>
         <passability>PassThroughOnly</passability>
@@ -297,7 +297,7 @@
         <destroyOnDrop>true</destroyOnDrop>
         <useHitPoints>false</useHitPoints>
         <statBases>
-            <Mass>40</Mass>
+            <Mass>5</Mass>
             <Flammability>0</Flammability>
             <AccuracyTouch>0.50</AccuracyTouch>
             <AccuracyShort>0.80</AccuracyShort>
@@ -335,10 +335,10 @@
             <MaxHitPoints>250</MaxHitPoints>
             <Flammability>0.7</Flammability>
             <WorkToBuild>11000</WorkToBuild>
-            <Beauty>-60</Beauty>
+            <Beauty>-20</Beauty>
         </statBases>
         <uiIconPath>Things/Building/Security/MachineGunEmplacement_MenuIcon</uiIconPath>
-        <uiIconScale>1.80</uiIconScale>
+        <uiIconScale>0.90</uiIconScale>
         <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
         <researchPrerequisites>
             <li>GasOperation</li>
@@ -405,19 +405,17 @@
                 <statFactors>
                     <MaxHitPoints>1.5</MaxHitPoints>
                 </statFactors>
-                <barrelDurabilityFactor>1.5</barrelDurabilityFactor>
+                <fuelCapacityFactor>1.5</fuelCapacityFactor>
                 <turretBurstCooldownTimeFactor>0.75</turretBurstCooldownTimeFactor>
             </li>
-            <li>
-                <compClass>TurretExtensions.CompSmartForcedTarget</compClass>
-            </li>
+            <li Class="TurretExtensions.CompProperties_SmartForcedTarget"/>
         </comps>
         <passability>PassThroughOnly</passability>
-        <pathCost>70</pathCost>
+        <pathCost>50</pathCost>
         <size>(3,1)</size>
         <hasInteractionCell>True</hasInteractionCell>
         <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-        <fillPercent>0.5</fillPercent>
+        <fillPercent>0.65</fillPercent>
         <castEdgeShadows>true</castEdgeShadows>
         <hasTooltip>true</hasTooltip>
         <specialDisplayRadius>30.9</specialDisplayRadius>
@@ -429,8 +427,7 @@
         </building>
         <modExtensions>
             <li Class="TurretExtensions.TurretFrameworkExtension">
-                <useMannerShootingAccuracy>true</useMannerShootingAccuracy>
-                <useMannerAimingDelayFactor>true</useMannerAimingDelayFactor>
+                <firingAngle>180</firingAngle>
             </li>
         </modExtensions>
     </ThingDef>
@@ -445,8 +442,8 @@
         <projectile>
             <damageDef>Bullet</damageDef>
             <damageAmountBase>18</damageAmountBase>
-            <stoppingPower>1.0</stoppingPower>
-            <speed>70</speed>
+            <stoppingPower>1.5</stoppingPower>
+            <speed>55</speed>
         </projectile>
     </ThingDef>
 
@@ -458,7 +455,7 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <menuHidden>true</menuHidden>
-        <description>Heavy machine gun mounted on top of a solid object.</description>
+        <description>Heavy machine gun mounted on top of a platform.</description>
         <soundInteract>Interact_Rifle</soundInteract>
         <tradeability>None</tradeability>
         <destroyOnDrop>true</destroyOnDrop>
@@ -545,17 +542,20 @@
     <ThingDef ParentName="BaseArtilleryWeapon">
         <defName>Artillery_MortarUpgraded</defName>
         <label>mortar</label>
-        <weaponTags Inherit="False" />
+        <weaponTags>
+            <li>Artillery_BaseDestroyer</li>
+        </weaponTags>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
                 <hasStandardCommand>true</hasStandardCommand>
-                <warmupTime>5.8</warmupTime>
+                <warmupTime>4.0</warmupTime>
                 <forcedMissRadius>10.6</forcedMissRadius>
                 <requireLineOfSight>false</requireLineOfSight>
-                <minRange>30</minRange>
+                <minRange>29.9</minRange>
                 <range>500</range>
+                <burstShotCount>1</burstShotCount>
                 <soundCast>Mortar_LaunchA</soundCast>
                 <muzzleFlashScale>16</muzzleFlashScale>
                 <targetParams>
