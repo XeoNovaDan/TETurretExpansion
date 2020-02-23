@@ -22,6 +22,7 @@
                 </statOffsets>
                 <basePowerConsumptionFactor>1.5</basePowerConsumptionFactor>
                 <fuelCapacityFactor>1.5</fuelCapacityFactor>
+                <fuelMultiplierFactor>1.5</fuelMultiplierFactor>
             </li>
         </value>
     </Operation>
@@ -51,6 +52,7 @@
                 </statOffsets>
                 <basePowerConsumptionFactor>2</basePowerConsumptionFactor>
                 <fuelCapacityFactor>1.5</fuelCapacityFactor>
+                <fuelMultiplierFactor>1.5</fuelMultiplierFactor>
             </li>
         </value>
     </Operation>
@@ -79,6 +81,7 @@
                 </statOffsets>
                 <basePowerConsumptionFactor>2</basePowerConsumptionFactor>
                 <fuelCapacityFactor>1.25</fuelCapacityFactor>
+                <fuelMultiplierFactor>1.25</fuelMultiplierFactor>
                 <turretBurstCooldownTimeFactor>0.83333</turretBurstCooldownTimeFactor>
             </li>
         </value>

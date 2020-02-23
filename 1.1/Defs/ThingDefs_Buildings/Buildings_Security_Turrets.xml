@@ -77,6 +77,7 @@
                     <MaxHitPoints>1.5</MaxHitPoints>
                 </statFactors>
                 <fuelCapacityFactor>1.5</fuelCapacityFactor>
+                <fuelMultiplierFactor>1.5</fuelMultiplierFactor>
             </li>
         </comps>
         <passability>PassThroughOnly</passability>
@@ -382,6 +383,7 @@
                 <basePowerConsumptionFactor>1.5</basePowerConsumptionFactor>
                 <turretBurstWarmupTimeFactor>0.8</turretBurstWarmupTimeFactor>
                 <fuelCapacityFactor>1.5</fuelCapacityFactor>
+                <fuelMultiplierFactor>1.5</fuelMultiplierFactor>
             </li>
         </comps>
         <passability>PassThroughOnly</passability>
@@ -529,6 +531,7 @@
                     <MaxHitPoints>1.5</MaxHitPoints>
                 </statFactors>
                 <fuelCapacityFactor>1.5</fuelCapacityFactor>
+                <fuelMultiplierFactor>1.5</fuelMultiplierFactor>
                 <turretBurstCooldownTimeFactor>0.75</turretBurstCooldownTimeFactor>
             </li>
             <li Class="TurretExtensions.CompProperties_SmartForcedTarget"/>
