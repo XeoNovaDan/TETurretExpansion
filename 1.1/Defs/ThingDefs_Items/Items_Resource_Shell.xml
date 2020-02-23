@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="CannonballBase" ParentName="ShellBase" Abstract="True">
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <MarketValue>16</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>Cannonballs</li>
+    </thingCategories>
+    <tradeTags IsNull="True"/>
+  </ThingDef>
+
+  <ThingDef Name="MakeableCannonballBase" ParentName="CannonballBase" Abstract="True">
+    <recipeMaker>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <workAmount>400</workAmount>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- High-explosive -->
+
+  <ThingDef ParentName="MakeableCannonballBase">
+    <defName>Shell_Cannonball_HighExplosive</defName>
+    <label>cannonball</label>
+    <description>A cannonball filled with gunpowder. Designed to be fired from old-fashioned cannons. Explodes when damaged.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Shell/Shell_HighExplosive</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>1.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <damageAmountBase>40</damageAmountBase>
+        <explosiveExpandPerStackcount>0.3</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+        <wickTicks>30~60</wickTicks>
+      </li>
+    </comps>
+    <projectileWhenLoaded>Bullet_Cannonball_HighExplosive</projectileWhenLoaded>
+    <costList>
+      <Steel>10</Steel>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Cannonball_HighExplosive</defName>
+    <label>cannonball</label>
+    <graphicData>
+      <texPath>Things/Projectile/ShellHighExplosive</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <speed>36</speed>
+      <explosionRadius>2.4</explosionRadius>
+      <soundExplode>MortarBomb_Explode</soundExplode>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+    </projectile>
+  </ThingDef>
+
+</Defs>
