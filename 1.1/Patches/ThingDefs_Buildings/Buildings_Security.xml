@@ -3,10 +3,10 @@
 
     <!-- Mini-Turret -->
     <Operation Class="PatchOperationAdd">
-        <xpath>*/ThingDef[defName="Turret_MiniTurret"]/comps</xpath>
+        <xpath>/Defs/ThingDef[defName="Turret_MiniTurret"]/comps</xpath>
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
-                <description>Improve the mini-turret's AI brain and reinforce its barrel to improve combat performance and reliability. The AI brain will also be smart enough to be directly controlled, but still too dumb to intelligently swap targets if a prioritized target gets downed.</description>
+                <description>Improve the mini-turret's sensors and reinforce its barrel to improve combat performance and reliability.</description>
                 <upgradedTurretDescription>A portable automatic turret. Requires steel to refurbish its barrel after heavy use. May explode when damaged. Its modified AI brain can be directly controlled, but is still rather dumb.</upgradedTurretDescription>
                 <costStuffCount>40</costStuffCount>
                 <costList>
@@ -18,21 +18,20 @@
                 <workToUpgrade>4500</workToUpgrade>
                 <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
                 <statOffsets>
-                    <ShootingAccuracyTurret>0.01</ShootingAccuracyTurret>
+                    <ShootingAccuracyTurret>0.005</ShootingAccuracyTurret>
                 </statOffsets>
                 <basePowerConsumptionFactor>1.5</basePowerConsumptionFactor>
                 <fuelCapacityFactor>1.5</fuelCapacityFactor>
-                <canForceAttack>true</canForceAttack>
             </li>
         </value>
     </Operation>
     
     <!-- Autocannon Turret -->
     <Operation Class="PatchOperationAdd">
-        <xpath>*/ThingDef[defName="Turret_Autocannon"]/comps</xpath>
+        <xpath>/Defs/ThingDef[defName="Turret_Autocannon"]/comps</xpath>
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
-                <description>Replace the autocannon turret's sensors and reinforce it with plasteel to improve accuracy, increase overall durability and reduce flammability.</description>
+                <description>Improve the autocannon turret's sensors and reinforce it with plasteel to improve accuracy, increase overall durability and reduce flammability.</description>
                 <costList>
                     <Plasteel>40</Plasteel>
                     <ComponentSpacer>2</ComponentSpacer>
@@ -48,7 +47,7 @@
                     <Flammability>0.57</Flammability>
                 </statFactors>
                 <statOffsets>
-                    <ShootingAccuracyTurret>0.01</ShootingAccuracyTurret>
+                    <ShootingAccuracyTurret>0.005</ShootingAccuracyTurret>
                 </statOffsets>
                 <basePowerConsumptionFactor>2</basePowerConsumptionFactor>
                 <fuelCapacityFactor>1.5</fuelCapacityFactor>
@@ -58,7 +57,7 @@
 
     <!-- Uranium Slug Turret-->
     <Operation Class="PatchOperationAdd">
-        <xpath>*/ThingDef[defName="Turret_Sniper"]/comps</xpath>
+        <xpath>/Defs/ThingDef[defName="Turret_Sniper"]/comps</xpath>
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
                 <description>Improve the uranium slug turret's sensors and reinforce it with plasteel to improve accuracy, increase overall durability and reduce flammability.</description>
@@ -76,11 +75,10 @@
                     <Flammability>0.57</Flammability>
                 </statFactors>
                 <statOffsets>
-                    <ShootingAccuracyTurret>0.007</ShootingAccuracyTurret>
+                    <ShootingAccuracyTurret>0.008</ShootingAccuracyTurret>
                 </statOffsets>
                 <basePowerConsumptionFactor>2</basePowerConsumptionFactor>
                 <fuelCapacityFactor>1.25</fuelCapacityFactor>
-                <turretGunDef>Gun_TurretSniperUpgraded</turretGunDef>
                 <turretBurstCooldownTimeFactor>0.83333</turretBurstCooldownTimeFactor>
             </li>
         </value>
@@ -88,10 +86,10 @@
 
     <!-- Mortar -->
     <Operation Class="PatchOperationAdd">
-        <xpath>*/ThingDef[defName="Turret_Mortar"]/comps</xpath>
+        <xpath>/Defs/ThingDef[defName="Turret_Mortar"]/comps</xpath>
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
-                <description>Reinforce the mortar's cannon and improve the mechanical feeding system to improve accuracy and decrease the time between shots.</description>
+                <description>Reinforce the mortar's cannon and improve the mechanical feeding system to improve accuracy and rate of fire.</description>
                 <costStuffCount>70</costStuffCount>
                 <costList>
                     <ComponentIndustrial>2</ComponentIndustrial>

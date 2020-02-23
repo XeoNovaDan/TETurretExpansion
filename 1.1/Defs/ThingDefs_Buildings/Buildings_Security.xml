@@ -25,6 +25,9 @@
             <WoodLog>130</WoodLog>
             <Steel>40</Steel>
         </costList>
+        <placeWorkers>
+            <li>PlaceWorker_ShowTurretRadius</li>
+        </placeWorkers>
         <graphicData>
             <texPath>Things/Building/Security/Ballista/Ballista</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -84,12 +87,10 @@
         <fillPercent>0.4</fillPercent>
         <castEdgeShadows>true</castEdgeShadows>
         <hasTooltip>true</hasTooltip>
-        <specialDisplayRadius>36.9</specialDisplayRadius>
         <building>
             <turretGunDef>Weapon_Ballista</turretGunDef>
             <turretBurstCooldownTime>4.5</turretBurstCooldownTime>
             <turretBurstWarmupTime>1.5</turretBurstWarmupTime>
-            <turretTopGraphicPath>Things/Building/Security/Ballista_Top</turretTopGraphicPath>
         </building>
         <modExtensions>
             <li Class="TurretExtensions.TurretFrameworkExtension">
@@ -114,19 +115,14 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef Name="BallistaWeapon" ParentName="BaseHumanGun">
+    <ThingDef Name="BallistaWeapon" ParentName="BaseWeaponTurret">
         <defName>Weapon_Ballista</defName>
         <label>ballista</label>
         <graphicData>
-            <texPath>Things/Building/Security/Ballista/Ballista_north</texPath>
+            <texPath>Things/Building/Security/Ballista_Top</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <menuHidden>true</menuHidden>
-        <description>A mechanical monstrosity that launches large projectiles like spears at a high velocity.</description>
-        <soundInteract>Interact_Rifle</soundInteract>
-        <tradeability>None</tradeability>
-        <destroyOnDrop>true</destroyOnDrop>
-        <useHitPoints>false</useHitPoints>
+        <description>A mechanical monstrosity that launches large projectiles such as spears at a high velocities.</description>
         <statBases>
             <Mass>30</Mass>
             <Flammability>0</Flammability>
@@ -137,7 +133,6 @@
             <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
             <DeteriorationRate>0</DeteriorationRate>
         </statBases>
-        <weaponTags Inherit="False" />
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
@@ -165,7 +160,7 @@
             <WorkToBuild>4000</WorkToBuild>
             <Mass>12</Mass>
             <Beauty>-20</Beauty>
-            <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
+            <ShootingAccuracyTurret>0.975</ShootingAccuracyTurret>
         </statBases>
         <uiIconPath>Things/Building/Security/TurretLongRange_MenuIcon</uiIconPath>
         <uiIconScale>3</uiIconScale>
@@ -186,6 +181,7 @@
         </stuffCategories>
         <placeWorkers>
             <li>PlaceWorker_TurretTop</li>
+            <li>PlaceWorker_ShowTurretRadius</li>
         </placeWorkers>
         <graphicData>
             <texPath>Things/Building/Security/TurretLongRange</texPath>
@@ -244,7 +240,7 @@
                 <workToUpgrade>7200</workToUpgrade>
                 <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
                 <statOffsets>
-                    <ShootingAccuracyTurret>0.01</ShootingAccuracyTurret>
+                    <ShootingAccuracyTurret>0.005</ShootingAccuracyTurret>
                 </statOffsets>
                 <basePowerConsumptionFactor>1.5</basePowerConsumptionFactor>
                 <turretBurstWarmupTimeFactor>0.8</turretBurstWarmupTimeFactor>
@@ -256,7 +252,6 @@
         <fillPercent>0.4</fillPercent>
         <castEdgeShadows>true</castEdgeShadows>
         <hasTooltip>true</hasTooltip>
-        <specialDisplayRadius>36.9</specialDisplayRadius>
         <thingCategories>
             <li>BuildingsSecurity</li>
         </thingCategories>
@@ -265,7 +260,6 @@
             <turretGunDef>Gun_TurretLongRange</turretGunDef>
             <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
             <turretBurstWarmupTime>1.5</turretBurstWarmupTime>
-            <turretTopGraphicPath>Things/Building/Security/TurretLongRange_Top</turretTopGraphicPath>
         </building>
     </ThingDef>
 
@@ -283,19 +277,14 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseHumanGun">
+    <ThingDef ParentName="BaseWeaponTurret">
         <defName>Gun_TurretLongRange</defName>
         <label>mini-sniper turret gun</label>
         <graphicData>
-            <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+            <texPath>Things/Building/Security/TurretLongRange_Top</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <menuHidden>true</menuHidden>
         <description>High-powered gun attached to a turret.</description>
-        <soundInteract>Interact_Rifle</soundInteract>
-        <tradeability>None</tradeability>
-        <destroyOnDrop>true</destroyOnDrop>
-        <useHitPoints>false</useHitPoints>
         <statBases>
             <Mass>5</Mass>
             <Flammability>0</Flammability>
@@ -306,9 +295,6 @@
             <RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
             <DeteriorationRate>0</DeteriorationRate>
         </statBases>
-        <weaponTags Inherit="False">
-            <li>TurretGun</li>
-        </weaponTags>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
@@ -355,6 +341,7 @@
         </stuffCategories>
         <placeWorkers>
             <li>PlaceWorker_TurretTop</li>
+            <li>PlaceWorker_ShowTurretRadius</li>
         </placeWorkers>
         <graphicData>
             <texPath>Things/Building/Security/MachineGunEmplacement/MachineGunEmplacement</texPath>
@@ -392,7 +379,7 @@
                 <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
             </li>
             <li Class="TurretExtensions.CompProperties_Upgradable">
-                <description>Improve the machine gun's feeding system and reinforce the barrel and foundation to decrease time between bursts and improve overall durability.</description>
+                <description>Improve the machine gun's feeding system, and reinforce the barrel and foundation to decrease time between bursts and improve overall durability.</description>
                 <costStuffCount>80</costStuffCount>
                 <costList>
                     <ComponentIndustrial>2</ComponentIndustrial>
@@ -415,15 +402,13 @@
         <size>(3,1)</size>
         <hasInteractionCell>True</hasInteractionCell>
         <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-        <fillPercent>0.65</fillPercent>
+        <fillPercent>0.57</fillPercent>
         <castEdgeShadows>true</castEdgeShadows>
         <hasTooltip>true</hasTooltip>
-        <specialDisplayRadius>30.9</specialDisplayRadius>
         <building>
             <turretGunDef>Gun_TurretMGEmplacement</turretGunDef>
             <turretBurstCooldownTime>3.6</turretBurstCooldownTime>
             <turretBurstWarmupTime>1.8</turretBurstWarmupTime>
-            <turretTopGraphicPath>Things/Building/Security/MachineGunEmplacement_Top</turretTopGraphicPath>
         </building>
         <modExtensions>
             <li Class="TurretExtensions.TurretFrameworkExtension">
@@ -447,19 +432,14 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseHumanGun">
+    <ThingDef ParentName="BaseWeaponTurret">
         <defName>Gun_TurretMGEmplacement</defName>
         <label>heavy machine gun</label>
         <graphicData>
             <texPath>Things/Building/Security/MachineGunEmplacement_Top</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <menuHidden>true</menuHidden>
         <description>Heavy machine gun mounted on top of a platform.</description>
-        <soundInteract>Interact_Rifle</soundInteract>
-        <tradeability>None</tradeability>
-        <destroyOnDrop>true</destroyOnDrop>
-        <useHitPoints>false</useHitPoints>
         <statBases>
             <Mass>40</Mass>
             <Flammability>0</Flammability>
@@ -470,9 +450,6 @@
             <RangedWeapon_Cooldown>3.6</RangedWeapon_Cooldown>
             <DeteriorationRate>0</DeteriorationRate>
         </statBases>
-        <weaponTags Inherit="False">
-            <li>TurretGun</li>
-        </weaponTags>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
@@ -495,74 +472,56 @@
 
     <!-- Upgraded weapons for vanilla turrets -->
 
-    <ThingDef ParentName="BaseHumanGun">
-        <defName>Gun_TurretSniperUpgraded</defName>
-        <label>sniper cannon</label>
-        <description>A self-loading sniper cannon designed to attach to a turret. Precise at range, it's not good at tracking close targets.</description>
-        <graphicData>
-            <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(2,2)</drawSize>
-        </graphicData>
-        <soundInteract>Interact_Rifle</soundInteract>
-        <menuHidden>true</menuHidden>
-        <destroyOnDrop>true</destroyOnDrop>
-        <tradeability>None</tradeability>
-        <useHitPoints>false</useHitPoints>
-        <statBases>
-            <AccuracyTouch>0.20</AccuracyTouch>
-            <AccuracyShort>0.30</AccuracyShort>
-            <AccuracyMedium>0.45</AccuracyMedium>
-            <AccuracyLong>0.99</AccuracyLong>
-            <RangedWeapon_Cooldown>2.9</RangedWeapon_Cooldown>
-            <DeteriorationRate>0</DeteriorationRate>
-            <Mass>40</Mass>
-            <Flammability>0</Flammability>
-        </statBases>
-        <weaponTags Inherit="false">
-            <li>TurretGun</li>
-        </weaponTags>
-        <verbs>
-            <li>
-                <verbClass>Verb_Shoot</verbClass>
-                <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_TurretSniper</defaultProjectile>
-                <warmupTime>0</warmupTime>
-                <minRange>11.9</minRange>
-                <range>49.9</range>
-                <burstShotCount>1</burstShotCount>
-                <soundCast>Shot_TurretSniper</soundCast>
-                <soundCastTail>GunTail_Heavy</soundCastTail>
-                <muzzleFlashScale>18</muzzleFlashScale>
-                <consumeFuelPerShot>1</consumeFuelPerShot>
-            </li>
-        </verbs>
-    </ThingDef>
-
     <ThingDef ParentName="BaseArtilleryWeapon">
         <defName>Artillery_MortarUpgraded</defName>
-        <label>mortar</label>
+        <label>upgraded mortar</label>
+        <description>Mortar launcher. Lobs bombs over walls. Very inaccurate but long-ranged.</description>
+        <graphicData>
+            <texPath>Things/Building/Security/TurretMortar_Top</texPath>
+        </graphicData>
         <weaponTags>
             <li>Artillery_BaseDestroyer</li>
         </weaponTags>
         <verbs>
-            <li>
-                <verbClass>Verb_Shoot</verbClass>
-                <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-                <hasStandardCommand>true</hasStandardCommand>
-                <warmupTime>4.0</warmupTime>
-                <forcedMissRadius>10.6</forcedMissRadius>
-                <requireLineOfSight>false</requireLineOfSight>
-                <minRange>29.9</minRange>
-                <range>500</range>
-                <burstShotCount>1</burstShotCount>
-                <soundCast>Mortar_LaunchA</soundCast>
-                <muzzleFlashScale>16</muzzleFlashScale>
-                <targetParams>
-                    <canTargetLocations>true</canTargetLocations>
-                </targetParams>
-            </li>
+        <li>
+            <verbClass>Verb_Shoot</verbClass>
+            <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+            <warmupTime>4.0</warmupTime>
+            <forcedMissRadius>10.6</forcedMissRadius>
+            <requireLineOfSight>false</requireLineOfSight>
+            <minRange>29.9</minRange>
+            <range>500</range>
+            <burstShotCount>1</burstShotCount>
+            <soundCast>Mortar_LaunchA</soundCast>
+            <muzzleFlashScale>16</muzzleFlashScale>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </li>
         </verbs>
+        <comps>
+            <li Class="CompProperties_ChangeableProjectile" />
+        </comps>
+        <building>
+            <fixedStorageSettings>
+                <filter>
+                    <categories>
+                        <li>MortarShells</li>
+                    </categories>
+                </filter>
+            </fixedStorageSettings>
+            <defaultStorageSettings>
+                <filter>
+                    <categories>
+                        <li>MortarShells</li>
+                    </categories>
+                    <disallowedThingDefs>
+                        <li>Shell_Firefoam</li>
+                        <li>Shell_AntigrainWarhead</li>
+                    </disallowedThingDefs>
+                </filter>
+            </defaultStorageSettings>
+        </building>
     </ThingDef>
 
 </Defs>

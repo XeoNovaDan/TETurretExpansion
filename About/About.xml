@@ -2,9 +2,22 @@
 <ModMetaData>
   <name>[XND] TE Turret Expansion</name>
   <author>XeoNovaDan</author>
+  <packageId>XeoNovaDan.TurretExtensions.TurretExpansion</packageId>
   <url>https://ludeon.com/forums/index.php?topic=29503.0</url>
   <supportedVersions>
-		<li>1.0</li>
-	</supportedVersions>
-  <description>Current version: v1.3.3 (17th October 2018)\n\nAdds three carefully-balanced turrets which use the framework extensions offered by Turret Extensions. Also makes the vanilla turrets upgradable.</description>
+    <li>1.0</li>
+    <li>1.1</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>XeoNovaDan.TurretExtensions</packageId>
+      <displayName>[XND] Turret Extensions</displayName>
+      <downloadUrl>https://github.com/RimWorld-CCL-Reborn/TurretExtensions/releases</downloadUrl>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1496122245</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>XeoNovaDan.TurretExtensions</li>
+  </loadAfter>
+  <description>Current version: v1.4.0 (22nd February 2020)\n\nAdds three carefully-balanced turrets which use the framework extensions offered by Turret Extensions. Also makes the vanilla turrets upgradable.</description>
 </ModMetaData>
