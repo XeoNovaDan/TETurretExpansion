@@ -34,7 +34,7 @@
     <label>cannonball</label>
     <description>A cannonball filled with gunpowder. Designed to be fired from old-fashioned cannons. Explodes when damaged.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Shell/Shell_HighExplosive</texPath>
+      <texPath>Things/Item/Resource/Shell/Shell_CannonBall_HighExplosive</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <comps>
@@ -57,7 +57,7 @@
     <defName>Bullet_Cannonball_HighExplosive</defName>
     <label>cannonball</label>
     <graphicData>
-      <texPath>Things/Projectile/ShellHighExplosive</texPath>
+      <texPath>Things/Projectile/ShellCannonBallHighExplosive</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
@@ -65,6 +65,7 @@
     <projectile>
       <damageDef>Bomb</damageDef>
       <damageAmountBase>40</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
       <speed>36</speed>
       <explosionRadius>2.4</explosionRadius>
       <soundExplode>MortarBomb_Explode</soundExplode>

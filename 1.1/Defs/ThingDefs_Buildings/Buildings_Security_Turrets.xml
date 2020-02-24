@@ -161,6 +161,7 @@
             <Mass>60</Mass>
             <Beauty>-20</Beauty>
         </statBases>
+        <uiIconPath>Things/Building/Security/Cannon_MenuIcon</uiIconPath>
         <uiIconScale>0.90</uiIconScale>
         <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
         <researchPrerequisites>
@@ -182,9 +183,9 @@
             <li>PlaceWorker_ShowTurretRadius</li>
         </placeWorkers>
         <graphicData>
-            <texPath>Things/Building/Security/Ballista/Ballista</texPath>
+            <texPath>Things/Building/Security/Cannon/Cannon</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(1.25,2.5)</drawSize>
+            <drawSize>(2.5,2.5)</drawSize>
             <damageData>
                 <cornerTL>Damage/Corner</cornerTL>
                 <cornerTR>Damage/Corner</cornerTR>
