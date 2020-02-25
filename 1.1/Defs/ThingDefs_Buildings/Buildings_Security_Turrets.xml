@@ -156,7 +156,7 @@
         <thingClass>Building_TurretGun</thingClass>
         <statBases>
             <MaxHitPoints>220</MaxHitPoints>
-            <Flammability>0.4</Flammability>
+            <Flammability>0.7</Flammability>
             <WorkToBuild>3600</WorkToBuild>
             <Mass>60</Mass>
             <Beauty>-20</Beauty>
