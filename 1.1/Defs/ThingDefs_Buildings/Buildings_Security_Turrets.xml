@@ -155,7 +155,7 @@
         <description>Description todo.</description>
         <thingClass>Building_TurretGun</thingClass>
         <statBases>
-            <MaxHitPoints>250</MaxHitPoints>
+            <MaxHitPoints>220</MaxHitPoints>
             <Flammability>0.4</Flammability>
             <WorkToBuild>3600</WorkToBuild>
             <Mass>60</Mass>
@@ -214,7 +214,6 @@
                 <statFactors>
                     <MaxHitPoints>1.5</MaxHitPoints>
                 </statFactors>
-                <fuelCapacityFactor>1.5</fuelCapacityFactor>
             </li>
         </comps>
         <passability>PassThroughOnly</passability>
@@ -457,7 +456,7 @@
         <description>A fixed gun emplacement with a heavy machine gun mounted on top. Lethal, but offers inferior cover to sandbags.</description>
         <thingClass>Building_TurretGun</thingClass>
         <statBases>
-            <MaxHitPoints>250</MaxHitPoints>
+            <MaxHitPoints>300</MaxHitPoints>
             <Flammability>0.7</Flammability>
             <WorkToBuild>11000</WorkToBuild>
             <Beauty>-20</Beauty>
