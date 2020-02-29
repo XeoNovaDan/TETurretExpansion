@@ -5,7 +5,7 @@
     <defName>Cannonballs</defName>
     <label>cannonballs</label>
     <parent>Manufactured</parent>
-    <iconPath>UI/Icons/ThingCategories/MortarShells</iconPath>
+    <iconPath>Things\Item\Resource\Shell\Shell_CannonBall_HighExplosive\Shell_CannonBall_HighExplosive_c</iconPath>
   </ThingCategoryDef>
 
 </Defs>

@@ -6,10 +6,9 @@
     <statBases>
       <MarketValue>16</MarketValue>
     </statBases>
-    <thingCategories>
+    <thingCategories Inherit="False">
       <li>Cannonballs</li>
     </thingCategories>
-    <tradeTags IsNull="True"/>
   </ThingDef>
 
   <ThingDef Name="MakeableCannonballBase" ParentName="CannonballBase" Abstract="True">

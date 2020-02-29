@@ -58,7 +58,7 @@
                 <initialFuelPercent>1</initialFuelPercent>
                 <autoRefuelPercent>0.15</autoRefuelPercent>
                 <showFuelGizmo>true</showFuelGizmo>
-                <fuelMultiplier>1</fuelMultiplier>
+                <fuelMultiplier>0.66666</fuelMultiplier>
                 <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
                 <outOfFuelMessage>Cannot shoot: Needs new arm</outOfFuelMessage>
                 <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
@@ -381,7 +381,7 @@
                 <initialFuelPercent>1</initialFuelPercent>
                 <autoRefuelPercent>0.25</autoRefuelPercent>
                 <showFuelGizmo>true</showFuelGizmo>
-                <fuelMultiplier>0.66666</fuelMultiplier>
+                <fuelMultiplier>0.5</fuelMultiplier>
                 <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
                 <outOfFuelMessage>Cannot shoot: Needs new barrel</outOfFuelMessage>
                 <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
