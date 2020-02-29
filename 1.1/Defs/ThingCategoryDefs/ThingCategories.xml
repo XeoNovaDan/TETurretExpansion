@@ -4,8 +4,8 @@
   <ThingCategoryDef>
     <defName>Cannonballs</defName>
     <label>cannonballs</label>
-    <parent>Manufactured</parent>
-    <iconPath>Things\Item\Resource\Shell\Shell_CannonBall_HighExplosive\Shell_CannonBall_HighExplosive_c</iconPath>
+    <parent>MortarShells</parent>
+    <iconPath>UI/Icons/ThingCategories/Cannonballs</iconPath>
   </ThingCategoryDef>
 
 </Defs>

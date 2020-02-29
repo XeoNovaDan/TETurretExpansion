@@ -14,7 +14,7 @@
             <WorkToBuild>4500</WorkToBuild>
             <Beauty>-20</Beauty>
         </statBases>
-        <uiIconScale>0.90</uiIconScale>
+        <uiIconScale>0.80</uiIconScale>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
         <researchPrerequisites>
             <li>Greatbow</li>
@@ -86,17 +86,19 @@
         <hasInteractionCell>True</hasInteractionCell>
         <interactionCellOffset>(0,0,-1)</interactionCellOffset>
         <fillPercent>0.4</fillPercent>
+        <constructEffect>ConstructWood</constructEffect>
         <soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
         <castEdgeShadows>true</castEdgeShadows>
         <hasTooltip>true</hasTooltip>
         <building>
             <turretGunDef>Weapon_Ballista</turretGunDef>
-            <turretBurstCooldownTime>4.5</turretBurstCooldownTime>
-            <turretBurstWarmupTime>1.5</turretBurstWarmupTime>
+            <turretBurstCooldownTime>5.8</turretBurstCooldownTime>
+            <turretBurstWarmupTime>1.7</turretBurstWarmupTime>
         </building>
         <modExtensions>
             <li Class="TurretExtensions.TurretFrameworkExtension">
                 <firingArc>90</firingArc>
+                <affectedByEMP>false</affectedByEMP>
             </li>
         </modExtensions>
     </ThingDef>
@@ -124,6 +126,8 @@
             <texPath>Things/Building/Security/Ballista_Top</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <uiIconPath>Things/Building/Security/Ballista/Ballista_north</uiIconPath>
+        <uiIconScale>0.80</uiIconScale>
         <description>A large crossbow that launches projectiles such as spears at high velocity.</description>
         <statBases>
             <Mass>30</Mass>
@@ -132,14 +136,14 @@
             <AccuracyShort>0.70</AccuracyShort>
             <AccuracyMedium>0.85</AccuracyMedium>
             <AccuracyLong>0.75</AccuracyLong>
-            <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+            <RangedWeapon_Cooldown>5.8</RangedWeapon_Cooldown>
             <DeteriorationRate>0</DeteriorationRate>
         </statBases>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <defaultProjectile>Projectile_Ballista</defaultProjectile>
-                <warmupTime>1.5</warmupTime>
+                <warmupTime>1.7</warmupTime>
                 <range>36.9</range>
                 <soundCast>Bow_Large</soundCast>
                 <consumeFuelPerShot>1</consumeFuelPerShot>
@@ -223,6 +227,7 @@
         <fillPercent>0.4</fillPercent>
         <castEdgeShadows>true</castEdgeShadows>
         <hasTooltip>true</hasTooltip>
+        <constructEffect>ConstructWood</constructEffect>
         <building>
             <turretGunDef>Weapon_Cannon</turretGunDef>
             <turretBurstCooldownTime>4.5</turretBurstCooldownTime>
@@ -231,6 +236,7 @@
         <modExtensions>
             <li Class="TurretExtensions.TurretFrameworkExtension">
                 <firingArc>90</firingArc>
+                <affectedByEMP>false</affectedByEMP>
             </li>
         </modExtensions>
     </ThingDef>
@@ -240,6 +246,8 @@
             <texPath>Things/Building/Security/Ballista_Top</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <uiIconPath>Things/Building/Security/Cannon_MenuIcon</uiIconPath>
+        <uiIconScale>0.90</uiIconScale>
         <statBases>
             <Mass>25</Mass>
             <Flammability>0</Flammability>
@@ -475,7 +483,7 @@
     <ThingDef ParentName="BuildingBase">
         <defName>Turret_MGEmplacement</defName>
         <label>machine gun emplacement</label>
-        <description>A fixed gun emplacement with a heavy machine gun mounted on top. Requires somebody to man it. Very powerful, but the platform offers inferior cover to sandbags.</description>
+        <description>A fixed gun emplacement with a heavy machine gun mounted on top. Has good power and good range, but poor accuracy and a slower rate of fire.</description>
         <thingClass>Building_TurretGun</thingClass>
         <statBases>
             <MaxHitPoints>300</MaxHitPoints>
@@ -574,6 +582,7 @@
         <modExtensions>
             <li Class="TurretExtensions.TurretFrameworkExtension">
                 <firingArc>180</firingArc>
+                <affectedByEMP>false</affectedByEMP>
             </li>
         </modExtensions>
     </ThingDef>
@@ -602,7 +611,7 @@
         </graphicData>
         <description>A heavy machine gun mounted on top of a platform.</description>
         <statBases>
-            <Mass>40</Mass>
+            <Mass>12</Mass>
             <Flammability>0</Flammability>
             <AccuracyTouch>0.44</AccuracyTouch>
             <AccuracyShort>0.53</AccuracyShort>

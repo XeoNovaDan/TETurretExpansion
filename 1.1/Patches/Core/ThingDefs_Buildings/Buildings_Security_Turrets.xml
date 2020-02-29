@@ -26,7 +26,7 @@
             </li>
         </value>
     </Operation>
-    
+
     <!-- Autocannon Turret -->
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName="Turret_Autocannon"]/comps</xpath>
@@ -105,6 +105,28 @@
                 <turretGunDef>Artillery_MortarUpgraded</turretGunDef>
                 <turretBurstCooldownTimeFactor>0.75</turretBurstCooldownTimeFactor>
             </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName="Artillery_Mortar"]/building/fixedStorageSettings/filter/disallowedCategories</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="Artillery_Mortar"]/building/fixedStorageSettings/filter</xpath>
+                <value>
+                    <disallowedCategories/>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Artillery_Mortar"]/building/fixedStorageSettings/filter/disallowedCategories</xpath>
+        <value>
+            <li>Cannonballs</li>
         </value>
     </Operation>
 
