@@ -8,7 +8,7 @@
     <li>1.0</li>
     <li>1.1</li>
   </supportedVersions>
-  <description>Current version: v1.4.0 (29th February 2020)\n\nAdds four carefully-balanced turrets which use the framework extensions offered by Turret Extensions, and also makes the vanilla turrets upgradable.</description>
+  <description>Current version: v1.4.1 (29th February 2020)\n\nAdds four carefully-balanced turrets which use the framework extensions offered by Turret Extensions, and also makes the vanilla turrets upgradable.</description>
   <modDependencies>
     <li>
       <packageId>XeoNovaDan.TurretExtensions</packageId>

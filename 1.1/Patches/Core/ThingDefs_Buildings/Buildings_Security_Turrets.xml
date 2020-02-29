@@ -108,6 +108,15 @@
         </value>
     </Operation>
 
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>/Defs/ThingDef[defName="Turret_Mortar"]</xpath>
+        <value>
+            <li Class="TurretExtensions.TurretFrameworkExtension">
+                <affectedByEMP>false</affectedByEMP>
+            </li>
+        </value>
+    </Operation>
+
     <Operation Class="PatchOperationSequence">
         <operations>
             <li Class="PatchOperationTest">

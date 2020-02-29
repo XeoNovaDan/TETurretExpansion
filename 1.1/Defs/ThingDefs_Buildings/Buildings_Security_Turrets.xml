@@ -677,6 +677,9 @@
                     <categories>
                         <li>MortarShells</li>
                     </categories>
+                    <disallowedCategories>
+                        <li>Cannonballs</li>
+                    </disallowedCategories>
                 </filter>
             </fixedStorageSettings>
             <defaultStorageSettings>
