@@ -541,7 +541,7 @@
                 <initialFuelPercent>1</initialFuelPercent>
                 <autoRefuelPercent>0.25</autoRefuelPercent>
                 <showFuelGizmo>true</showFuelGizmo>
-                <fuelMultiplier>7.5</fuelMultiplier>
+                <fuelMultiplier>6</fuelMultiplier>
                 <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
                 <outOfFuelMessage>Cannot shoot: Needs new barrel</outOfFuelMessage>
                 <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
