@@ -92,7 +92,7 @@
         <xpath>/Defs/ThingDef[defName="Turret_Mortar"]/comps</xpath>
         <value>
             <li Class="TurretExtensions.CompProperties_Upgradable">
-                <description>Reinforce the mortar's cannon and improve the mechanical feeding system to improve accuracy and rate of fire.</description>
+                <description>Rifle the mortar's barrel and improve the mechanical feeding system to improve accuracy and rate of fire.</description>
                 <costStuffCount>70</costStuffCount>
                 <costList>
                     <ComponentIndustrial>2</ComponentIndustrial>

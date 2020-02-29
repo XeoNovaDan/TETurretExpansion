@@ -6,12 +6,12 @@
     <ThingDef ParentName="BuildingBase">
         <defName>Ballista</defName>
         <label>ballista</label>
-        <description>An ancient but deadly contraption that launches heavy projectiles at enemies. Requires somebody to man it. Long-ranged, but fires slowly.</description>
+        <description>An ancient but deadly contraption that launches heavy projectiles at enemies. Requires somebody to man it. Long-ranged, but fires slowly and has a limited firing arc.</description>
         <thingClass>Building_TurretGun</thingClass>
         <statBases>
             <MaxHitPoints>180</MaxHitPoints>
             <Flammability>1.0</Flammability>
-            <WorkToBuild>7500</WorkToBuild>
+            <WorkToBuild>4500</WorkToBuild>
             <Beauty>-20</Beauty>
         </statBases>
         <uiIconScale>0.90</uiIconScale>
@@ -68,7 +68,7 @@
                 <costList>
                     <Steel>20</Steel>
                 </costList>
-                <workToUpgrade>3200</workToUpgrade>
+                <workToUpgrade>3500</workToUpgrade>
                 <researchPrerequisites>
                     <li>Greatbow</li>
                 </researchPrerequisites>
@@ -124,14 +124,14 @@
             <texPath>Things/Building/Security/Ballista_Top</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <description>A mechanical monstrosity that launches large projectiles such as spears at a high velocities.</description>
+        <description>A large crossbow that launches projectiles such as spears at high velocity.</description>
         <statBases>
             <Mass>30</Mass>
             <Flammability>0</Flammability>
             <AccuracyTouch>0.50</AccuracyTouch>
-            <AccuracyShort>0.85</AccuracyShort>
-            <AccuracyMedium>0.65</AccuracyMedium>
-            <AccuracyLong>0.45</AccuracyLong>
+            <AccuracyShort>0.70</AccuracyShort>
+            <AccuracyMedium>0.85</AccuracyMedium>
+            <AccuracyLong>0.75</AccuracyLong>
             <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
             <DeteriorationRate>0</DeteriorationRate>
         </statBases>
@@ -152,18 +152,18 @@
     <ThingDef ParentName="BuildingBase">
         <defName>Cannon</defName>
         <label>cannon</label>
-        <description>Description todo.</description>
+        <description>An ancient piece of artillery that launches explosive cannonballs over considerable distances. Requires somebody to man it. Has a limited firing arc and is very inaccurate.</description>
         <thingClass>Building_TurretGun</thingClass>
         <statBases>
             <MaxHitPoints>220</MaxHitPoints>
             <Flammability>0.7</Flammability>
-            <WorkToBuild>3600</WorkToBuild>
-            <Mass>60</Mass>
+            <WorkToBuild>3200</WorkToBuild>
+            <Mass>25</Mass>
             <Beauty>-20</Beauty>
         </statBases>
         <uiIconPath>Things/Building/Security/Cannon_MenuIcon</uiIconPath>
         <uiIconScale>0.90</uiIconScale>
-        <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
         <researchPrerequisites>
             <li>Smithing</li>
         </researchPrerequisites>
@@ -174,7 +174,7 @@
         </thingCategories>
         <costList>
             <Steel>110</Steel>
-            <WoodLog>30</WoodLog>
+            <WoodLog>40</WoodLog>
         </costList>
         <inspectorTabs>
             <li>ITab_Shells</li>
@@ -202,18 +202,17 @@
             </li>
             <li Class="CompProperties_Forbiddable"/>
             <li Class="TurretExtensions.CompProperties_Upgradable">
-                <description>Reinforce the ballista with steel to improve its overall durability.</description>
+                <description>Improve the cannon's accuracy by rifling the barrel.</description>
+                <upgradedTurretDescription>An ancient piece of artillery that launches explosive cannonballs over considerable distances. Requires somebody to man it. Has a limited firing arc and is somewhat inaccurate.</upgradedTurretDescription>
                 <costList>
-                    <Steel>20</Steel>
+                    <Steel>50</Steel>
                 </costList>
-                <workToUpgrade>3200</workToUpgrade>
+                <workToUpgrade>4000</workToUpgrade>
                 <researchPrerequisites>
-                    <li>Greatbow</li>
+                    <li>Smithing</li>
                 </researchPrerequisites>
-                <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-                <statFactors>
-                    <MaxHitPoints>1.5</MaxHitPoints>
-                </statFactors>
+                <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+                <turretGunDef>Weapon_CannonUpgraded</turretGunDef>
             </li>
         </comps>
         <passability>PassThroughOnly</passability>
@@ -236,34 +235,17 @@
         </modExtensions>
     </ThingDef>
 
-    <ThingDef ParentName="BaseArtilleryWeapon">
-        <defName>Weapon_Cannon</defName>
-        <label>cannon</label>
+    <ThingDef Name="BaseCannonWeapon" ParentName="BaseArtilleryWeapon" Abstract="True">
         <graphicData>
             <texPath>Things/Building/Security/Ballista_Top</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <description>Description todo.</description>
         <statBases>
-            <Mass>30</Mass>
+            <Mass>25</Mass>
             <Flammability>0</Flammability>
             <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
             <DeteriorationRate>0</DeteriorationRate>
         </statBases>
-        <verbs>
-            <li>
-                <verbClass>Verb_Shoot</verbClass>
-                <warmupTime>1.5</warmupTime>
-                <minRange>3.9</minRange>
-                <range>24.9</range>
-                <forcedMissRadius>3.9</forcedMissRadius>
-                <soundCast>Mortar_LaunchA</soundCast>
-                <muzzleFlashScale>16</muzzleFlashScale>
-                <targetParams>
-                    <canTargetLocations>true</canTargetLocations>
-                </targetParams>
-            </li>
-        </verbs>
         <comps>
             <li Class="CompProperties_ChangeableProjectile" />
         </comps>
@@ -285,6 +267,46 @@
         </building>
     </ThingDef>
 
+    <ThingDef ParentName="BaseCannonWeapon">
+        <defName>Weapon_Cannon</defName>
+        <label>cannon</label>
+        <description>An ancient cannon designed to fire cannonballs. Very inaccurate.</description>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <warmupTime>1.5</warmupTime>
+                <minRange>4.9</minRange>
+                <range>39.9</range>
+                <forcedMissRadius>4</forcedMissRadius>
+                <soundCast>Mortar_LaunchA</soundCast>
+                <muzzleFlashScale>16</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseCannonWeapon">
+        <defName>Weapon_CannonUpgraded</defName>
+        <label>improved cannon</label>
+        <description>An ancient cannon designed to fire cannonballs. Somewhat inaccurate.</description>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <warmupTime>1.5</warmupTime>
+                <minRange>4.9</minRange>
+                <range>39.9</range>
+                <forcedMissRadius>3</forcedMissRadius>
+                <soundCast>Mortar_LaunchA</soundCast>
+                <muzzleFlashScale>16</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+
     <!-- ========== Mini-Sniper Turret ========== -->
 
     <ThingDef ParentName="BuildingBase">
@@ -295,7 +317,7 @@
         <statBases>
             <MaxHitPoints>100</MaxHitPoints>
             <Flammability>0.7</Flammability>
-            <WorkToBuild>4000</WorkToBuild>
+            <WorkToBuild>2400</WorkToBuild>
             <Mass>12</Mass>
             <Beauty>-20</Beauty>
             <ShootingAccuracyTurret>0.975</ShootingAccuracyTurret>
@@ -375,7 +397,7 @@
                     <li>GunTurrets</li>
                     <li>PrecisionRifling</li>
                 </researchPrerequisites>
-                <workToUpgrade>7200</workToUpgrade>
+                <workToUpgrade>3500</workToUpgrade>
                 <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
                 <statOffsets>
                     <ShootingAccuracyTurret>0.005</ShootingAccuracyTurret>
@@ -453,12 +475,12 @@
     <ThingDef ParentName="BuildingBase">
         <defName>Turret_MGEmplacement</defName>
         <label>machine gun emplacement</label>
-        <description>A fixed gun emplacement with a heavy machine gun mounted on top. Lethal, but offers inferior cover to sandbags.</description>
+        <description>A fixed gun emplacement with a heavy machine gun mounted on top. Requires somebody to man it. Very powerful, but the platform offers inferior cover to sandbags.</description>
         <thingClass>Building_TurretGun</thingClass>
         <statBases>
             <MaxHitPoints>300</MaxHitPoints>
             <Flammability>0.7</Flammability>
-            <WorkToBuild>11000</WorkToBuild>
+            <WorkToBuild>6000</WorkToBuild>
             <Beauty>-20</Beauty>
         </statBases>
         <uiIconPath>Things/Building/Security/MachineGunEmplacement_MenuIcon</uiIconPath>
@@ -517,12 +539,12 @@
                 <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
             </li>
             <li Class="TurretExtensions.CompProperties_Upgradable">
-                <description>Improve the machine gun's feeding system, and reinforce the barrel and foundation to decrease time between bursts and improve overall durability.</description>
+                <description>Improve the machine gun's feeding system to increase rate of fire, and reinforce the barrel and platform to improve overall durability.</description>
                 <costStuffCount>80</costStuffCount>
                 <costList>
                     <ComponentIndustrial>2</ComponentIndustrial>
                 </costList>
-                <workToUpgrade>9000</workToUpgrade>
+                <workToUpgrade>5000</workToUpgrade>
                 <researchPrerequisites>
                     <li>GasOperation</li>
                 </researchPrerequisites>
@@ -578,7 +600,7 @@
             <texPath>Things/Building/Security/MachineGunEmplacement_Top</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <description>Heavy machine gun mounted on top of a platform.</description>
+        <description>A heavy machine gun mounted on top of a platform.</description>
         <statBases>
             <Mass>40</Mass>
             <Flammability>0</Flammability>
