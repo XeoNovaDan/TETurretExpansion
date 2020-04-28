@@ -385,11 +385,11 @@
                         <li>Steel</li>
                     </thingDefs>
                 </fuelFilter>
-                <fuelCapacity>40</fuelCapacity>
+                <fuelCapacity>20</fuelCapacity> <!-- 20 bursts -->
                 <initialFuelPercent>1</initialFuelPercent>
                 <autoRefuelPercent>0.25</autoRefuelPercent>
                 <showFuelGizmo>true</showFuelGizmo>
-                <fuelMultiplier>0.5</fuelMultiplier>
+                <fuelMultiplier>0.25</fuelMultiplier> <!-- 4 steel per burst, 80 per full rearm-->
                 <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
                 <outOfFuelMessage>Cannot shoot: Needs new barrel</outOfFuelMessage>
                 <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
@@ -441,7 +441,7 @@
         </graphicData>
         <projectile>
             <damageDef>Bullet</damageDef>
-            <damageAmountBase>18</damageAmountBase>
+            <damageAmountBase>20</damageAmountBase>
             <speed>100</speed>
         </projectile>
     </ThingDef>
